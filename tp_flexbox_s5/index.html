@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page de présentation personnelle - TP Flexbox S5">
+  <title> Monsieur Chat— Portfolio </title>
+
+  <!-- ======================================================
+       LIEN VERS LA FEUILLE DE STYLE
+       Votre fichier CSS s'appelle "style.css"
+       Il doit être dans le même dossier que ce fichier HTML
+  ====================================================== -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+<body>
+
+  <!-- ============================================================
+    HEADER
+    EXERCICE 3 — Ce header doit devenir un container Flexbox
+    → Logo (h1) à gauche | Navigation à droite
+    → Voir les instructions dans style.css, section EXERCICE 3
+  ============================================================ -->
+  <header>
+
+    <div class="header-logo">
+      <h1> Monsieur Chat </h1>
+      <p class="header-tagline">Développeur Web Junior · Bachelor 1</p>
+    </div>
+
+    <!-- Navigation principale -->
+    <!-- EXERCICE 1 — Le <ul> ici doit devenir horizontal avec Flexbox -->
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <!-- ============================================================
+    CONTENU PRINCIPAL
+  ============================================================ -->
+  <main>
+
+
+    <!-- ============================================================
+      SECTION HERO / À PROPOS
+      EXERCICE 4 — Cette section doit centrer son contenu
+      → Centrage parfait : horizontal ET vertical
+      → min-height: 80vh pour donner de l'espace
+    ============================================================ -->
+    <section id="a-propos" class="section-hero">
+
+      <img
+        src="img/cat.jpg"
+        alt="Photo de profil de Monsieur Chat"
+        class="photo-profil"
+        width="150"
+        height="150"
+      >
+
+      <div class="hero-texte">
+        <h2>À propos de moi</h2>
+        <p>
+          Bonjour ! Je m'appelle <strong>Monsieur Chat</strong> et je suis actuellement
+          étudiant(e) en <em>Bachelor 1 Développement Web</em> à la
+          <strong>Green Up Academy</strong>. Passionné(e) par les technologies web,
+          j'apprends à créer des sites modernes, accessibles et responsive.
+        </p>
+        <p>
+          Mon objectif est de maîtriser HTML, CSS et JavaScript pour construire
+          des interfaces utilisateur soignées et fonctionnelles.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- ============================================================
+      SECTION COMPÉTENCES
+      EXERCICE 2 — Les cards de compétences doivent s'aligner
+      → 3 cards côte à côte avec flex-wrap pour le retour à la ligne
+      → Chaque <article> = une card
+    ============================================================ -->
+    <section id="competences">
+      <h2 >Mes compétences</h2>
+      <!--Bouton commandeé par le javascrip--t>
+      <!-Texte "masquer/afficher" mis à jour directement dans lescript.js-->
+      <!--class .etat-masque ajotee/retiree dans le script.js-->
+      <button id="btn-competences" onclick="toggleCompetences()">
+        Masquer les compétences
+      </button>
+       
+      <!-- Le <div class="grille-competences"> est le CONTAINER FLEX -->
+      <!-- Les <article> à l'intérieur sont les FLEX ITEMS -->
+      <div class="grille-competences">
+
+        <article class="card-competence">
+          <h3>🌐 HTML5</h3>
+          <p>Structure sémantique, balises, formulaires, accessibilité (WCAG).</p>
+          <ul>
+            <li>Balises sémantiques (header, main, section…)</li>
+            <li>Formulaires et validation</li>
+            <li>Attributs ARIA</li>
+          </ul>
+        </article>
+
+        <article class="card-competence">
+          <h3>🎨 CSS3</h3>
+          <p>Mise en page, animations, responsive design, Flexbox.</p>
+          <ul>
+            <li>Sélecteurs et spécificité</li>
+            <li>Box model</li>
+            <li>Flexbox ← (on travaille ça aujourd'hui !)</li>
+          </ul>
+        </article>
+
+        <article class="card-competence">
+          <h3>🛠️ Outils</h3>
+          <p>Environnement de développement et bonnes pratiques.</p>
+          <ul>
+            <li>VS Code + extensions</li>
+            <li>Git & GitHub (bases)</li>
+            <li>Chrome DevTools</li>
+          </ul>
+        </article>
+
+        <article class="card-competence">
+          <h3>📐 Méthodologie</h3>
+          <p>Organisation et qualité du code.</p>
+          <ul>
+            <li>Validation W3C</li>
+            <li>Indentation et commentaires</li>
+            <li>Convention de nommage CSS</li>
+          </ul>
+        </article>
+
+        <article class="card-competence">
+          <h3>🚀 En cours</h3>
+          <p>Compétences en cours d'acquisition.</p>
+          <ul>
+            <li>JavaScript ES6+</li>
+            <li>Responsive Design</li>
+            <li>Grid CSS</li>
+          </ul>
+        </article>
+
+        <article class="card-competence">
+          <h3>🌱 À venir</h3>
+          <p>Prochaines étapes de mon apprentissage.</p>
+          <ul>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Bases de données SQL</li>
+          </ul>
+        </article>
+
+      </div>
+      <!-- fin .grille-competences -->
+
+    </section>
+
+
+    <!-- ============================================================
+      SECTION PARCOURS
+      Pas d'exercice Flexbox ici — section déjà stylisée
+    ============================================================ -->
+    <section id="parcours">
+      <h2>Mon parcours</h2>
+
+      <article>
+        <h3>🎓 Formation actuelle</h3>
+        <p><strong>Bachelor 1 Développement Web</strong> — Green Up Academy, Paris</p>
+        <p><em>2025 – 2026</em></p>
+        <p>
+          Programme intensif couvrant HTML5, CSS3, JavaScript, Git et les bases
+          du développement web moderne. Projets pratiques chaque semaine.
+        </p>
+      </article>
+
+      <article>
+        <h3>🏫 Formation précédente</h3>
+        <p><strong>Baccalauréat [votre spécialité]</strong> — Lycée [votre lycée]</p>
+        <p><em>Obtenu en [année]</em></p>
+      </article>
+
+      <article>
+        <h3>💼 Expériences</h3>
+        <ol>
+          <li>
+            <strong>Projet personnel (2024)</strong> — Site web statique pour une association
+          </li>
+          <li>
+            <strong>Stage découverte (2023)</strong> — Observation en agence web (1 semaine)
+          </li>
+        </ol>
+      </article>
+    </section>
+
+
+    <!-- ============================================================
+      SECTION CONTACT
+      Pas d'exercice Flexbox ici — section déjà stylisée
+    ============================================================ -->
+    <section id="contact">
+      <h2>Me contacter</h2>
+
+      <p>
+        Une question, une opportunité de stage, ou simplement envie d'échanger ?
+        N'hésitez pas à me contacter via le formulaire ci-dessous.
+      </p>
+
+      <form action="#" method="post" class="formulaire-contact">
+
+        <div class="champ">
+          <label for="nom">Nom complet <abbr title="Obligatoire">*</abbr></label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required autofocus>
+        </div>
+
+        <div class="champ">
+          <label for="email">Adresse email <abbr title="Obligatoire">*</abbr></label>
+          <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+        </div>
+
+        <div class="champ">
+          <label for="sujet">Sujet <abbr title="Obligatoire">*</abbr></label>
+          <select id="sujet" name="sujet" required>
+            <option value="">-- Choisissez un sujet --</option>
+            <option value="stage">Opportunité de stage</option>
+            <option value="projet">Proposition de projet</option>
+            <option value="question">Question technique</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="champ">
+          <label for="message">Message <abbr title="Obligatoire">*</abbr></label>
+          <textarea id="message" name="message" rows="6" placeholder="Votre message..." required minlength="10"></textarea>
+        </div>
+
+        <div class="champ champ-checkbox">
+          <input type="checkbox" id="rgpd" name="rgpd" required>
+          <label for="rgpd">J'accepte que mes données soient utilisées pour me recontacter <abbr title="Obligatoire">*</abbr></label>
+        </div>
+
+        <div class="champ champ-boutons">
+          <button type="submit">Envoyer le message</button>
+          <button type="reset">Réinitialiser</button>
+        </div>
+
+      </form>
+
+      <aside class="coordonnees">
+        <h3>Retrouvez-moi aussi sur</h3>
+        <ul>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:prenom.nom@email.com">Email direct</a></li>
+        </ul>
+      </aside>
+
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+    FOOTER
+  ============================================================ -->
+  <footer>
+    <p>&copy; 2026 Monsieur Chat — Bachelor 1 Développement Web · Green Up Academy</p>
+    <p><a href="#a-propos">Retour en haut ↑</a></p>
+  </footer>
+
+
+</body>
+</html>
