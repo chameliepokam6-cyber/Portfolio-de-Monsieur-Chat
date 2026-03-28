@@ -89,14 +89,11 @@
       → Chaque <article> = une card
     ============================================================ -->
     <section id="competences">
-      <h2 >Mes compétences</h2>
-      <!--Bouton commandeé par le javascrip--t>
-      <!-Texte "masquer/afficher" mis à jour directement dans lescript.js-->
-      <!--class .etat-masque ajotee/retiree dans le script.js-->
-      <button id="btn-competences" onclick="toggleCompetences()">
+      <h2>Mes compétences</h2>
+      <button id = "btn-competences" onclick = "toggleCompetences()">
         Masquer les compétences
       </button>
-       
+
       <!-- Le <div class="grille-competences"> est le CONTAINER FLEX -->
       <!-- Les <article> à l'intérieur sont les FLEX ITEMS -->
       <div class="grille-competences">
@@ -216,8 +213,7 @@
         N'hésitez pas à me contacter via le formulaire ci-dessous.
       </p>
 
-      <form action="#" method="post" class="formulaire-contact">
-
+      <form action="#" method="post" class="formulaire-contact" onsubmit="return validerFormulaire()">
         <div class="champ">
           <label for="nom">Nom complet <abbr title="Obligatoire">*</abbr></label>
           <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required autofocus>
